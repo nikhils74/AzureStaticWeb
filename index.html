@@ -172,9 +172,39 @@
         .hero h2 {
             font-size: clamp(1.2rem, 4vw, 1.8rem);
             color: var(--text-secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-weight: 400;
             animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero h3 {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            color: var(--text-accent);
+            margin-bottom: 2rem;
+            font-weight: 500;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .degree-institution {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .degree-institution h2 {
+            margin-bottom: 0;
+            font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .institution-highlight {
+            color: var(--text-accent);
+            font-weight: 500;
         }
 
         .hero p {
@@ -445,6 +475,68 @@
         }
 
         .skill-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .certification-card {
+            background: var(--bg-secondary);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-glow);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .certification-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .certification-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-tertiary);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .certification-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .certification-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .certification-card p {
             color: var(--text-secondary);
             line-height: 1.6;
         }
@@ -810,6 +902,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#clubs">Clubs</a></li>
@@ -829,8 +922,11 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm Nikhil S</h1>
-                <h2>Computer Science & Engineering Student</h2>
-                <p>Passionate about technology, innovation, and creating solutions that make a difference. Currently pursuing my degree while working on exciting projects and expanding my skills.</p>
+                <div class="degree-institution">
+                    <h2>Bachelor of Engineering in Computer Science and Engineering</h2>
+                    <h3 class="institution-highlight">RV Institute of Technology and Management</h3>
+                </div>
+
                 <div class="hero-social-links">
                     <a href="https://github.com/nikhils74" target="_blank" class="hero-social-link">
                         <i class="fab fa-github"></i>
@@ -903,12 +999,29 @@
                     <h4>Web Development</h4>
                     <p>Flask, HTML5, CSS3</p>
                 </div>
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card fade-in">
+                    <div class="certification-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h4>Certifications</h4>
-                    <p>AZ-900 Microsoft Azure, Cisco Networking Basics</p>
+                    <h4>AZ-900 Microsoft Azure</h4>
+                    <p>Microsoft Azure Fundamentals</p>
+                </div>
+                <div class="certification-card fade-in">
+                    <div class="certification-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h4>Cisco Networking Basics</h4>
+                    <p>Networking Fundamentals</p>
                 </div>
             </div>
         </div>
@@ -919,6 +1032,22 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">AyurGenAI</div>
+                    <div class="project-content">
+                        <h4>Multi-Agent RAG-Based Drug Discovery Platform (In Development)</h4>
+                        <p>Jun 2025 – Present</p>
+                        <p>• Designing and developing AyurGenAI, a Multi-Agent Retrieval-Augmented Generation (RAG) platform using BioBERT, open-source LLMs, FAISS, and Neo4j to integrate Ayurvedic medicinal plant data with biomedical research</p>
+                        <p>• Implementing data processing pipeline to link 4,000+ medicinal plants, 17,000+ phytochemicals, and 1,600+ therapeutic uses from structured (IMPPAT, AYUSH) and unstructured (Ayurvedic texts, PubMed) datasets</p>
+                        <p>• Building interactive research dashboard with advanced filtering, real-time data retrieval, and knowledge graph visualization to streamline researcher workflows and accelerate drug candidate identification</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                In Development
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card fade-in">
                     <div class="project-image">VectorVault</div>
                     <div class="project-content">
@@ -976,12 +1105,12 @@
         <div class="container">
             <h2 class="section-title">Interests</h2>
             <div class="education-item fade-in">
-                <h4>Creative Arts</h4>
-                <p>Drawing, Painting, Sketching</p>
+                <h4>Technology & Research</h4>
+                <p>Ricing Linux/Distro hopping, Emerging Technology Research</p>
             </div>
             <div class="education-item fade-in">
-                <h4>Sports</h4>
-                <p>Volleyball, Basketball</p>
+                <h4>Creative Arts & Sports</h4>
+                <p>Sketching/Painting, Football</p>
             </div>
         </div>
     </section>
