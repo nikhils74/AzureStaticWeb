@@ -969,14 +969,28 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h4>Programming Languages</h4>
-                    <p>Python, Go, Java, HTML5, CSS</p>
+                    <p>Python, Go, Java</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h4>Cloud & DevOps</h4>
-                    <p>Azure, AWS, Docker, Kubernetes, Git</p>
+                    <p>Microsoft Azure (ADF, ADLS Gen2, Databricks, Synapse Analytics), AWS, Linux, Docker, GitHub</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Data Engineering & Databases</h4>
+                    <p>Apache Spark, SQL, MongoDB, Medallion Architecture (Bronze/Silver/Gold)</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h4>Tools & Utilities</h4>
+                    <p>Git, Vim, Neovim, Docker</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">
@@ -984,13 +998,6 @@
                     </div>
                     <h4>AI/ML Libraries</h4>
                     <p>LangChain, Streamlit, Scikit-learn, NLTK, PyTorch</p>
-                </div>
-                <div class="skill-card fade-in">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h4>Data Analysis</h4>
-                    <p>NumPy, Pandas, Matplotlib, Seaborn</p>
                 </div>
                 <div class="skill-card fade-in">
                     <div class="skill-icon">
@@ -1033,17 +1040,18 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in">
-                    <div class="project-image">AyurGenAI</div>
+                    <div class="project-image">PipelineX</div>
                     <div class="project-content">
-                        <h4>Multi-Agent RAG-Based Drug Discovery Platform (In Development)</h4>
-                        <p>Jun 2025 – Present</p>
-                        <p>• Designing and developing AyurGenAI, a Multi-Agent Retrieval-Augmented Generation (RAG) platform using BioBERT, open-source LLMs, FAISS, and Neo4j to integrate Ayurvedic medicinal plant data with biomedical research</p>
-                        <p>• Implementing data processing pipeline to link 4,000+ medicinal plants, 17,000+ phytochemicals, and 1,600+ therapeutic uses from structured (IMPPAT, AYUSH) and unstructured (Ayurvedic texts, PubMed) datasets</p>
-                        <p>• Building interactive research dashboard with advanced filtering, real-time data retrieval, and knowledge graph visualization to streamline researcher workflows and accelerate drug candidate identification</p>
+                        <h4>End-to-End Data Engineering Pipeline on Azure (PipelineX)</h4>
+                        <p>📌 Project Description – PipelineX</p>
+                        <p>Designed and implemented a full-scale data engineering pipeline on Microsoft Azure, using the Brazilian E-Commerce dataset. Followed the Medallion Architecture (Bronze → Silver → Gold) to ensure clean separation of raw, processed, and curated data.</p>
+                        <p>Ingested data from GitHub (CSV) and a SQL Database using Azure Data Factory (ADF) into Azure Data Lake Storage Gen2 (ADLS). Performed complex data cleaning, transformation, and enrichment using Azure Databricks (Spark), integrating external MongoDB data.</p>
+                        <p>Stored cleaned and enriched data in Parquet format (Silver layer), and served analytics-ready datasets in the Gold layer using Azure Synapse Analytics (Serverless SQL Pool). Enabled downstream consumption for BI tools (Power BI, Tableau) and data science workloads.</p>
+                        <p>Utilized cloud-native technologies to build a scalable, modular, and production-grade ETL workflow, applying best practices in data architecture, orchestration, and lakehouse modeling using Azure services.</p>
                         <div class="project-links">
-                            <a href="#" target="_blank">
+                            <a href="https://github.com/nikhils74/PipelineX-AzureBIG-DATA" target="_blank">
                                 <i class="fab fa-github"></i>
-                                In Development
+                                GitHub
                             </a>
                         </div>
                     </div>
@@ -1061,6 +1069,22 @@
                             <a href="https://github.com/nikhils74/VectorVault" target="_blank">
                                 <i class="fab fa-github"></i>
                                 GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">AyurGenAI</div>
+                    <div class="project-content">
+                        <h4>Multi-Agent RAG-Based Drug Discovery Platform (In Development)</h4>
+                        <p>Jun 2025 – Present</p>
+                        <p>• Designing and developing AyurGenAI, a Multi-Agent Retrieval-Augmented Generation (RAG) platform using BioBERT, open-source LLMs, FAISS, and Neo4j to integrate Ayurvedic medicinal plant data with biomedical research</p>
+                        <p>• Implementing data processing pipeline to link 4,000+ medicinal plants, 17,000+ phytochemicals, and 1,600+ therapeutic uses from structured (IMPPAT, AYUSH) and unstructured (Ayurvedic texts, PubMed) datasets</p>
+                        <p>• Building interactive research dashboard with advanced filtering, real-time data retrieval, and knowledge graph visualization to streamline researcher workflows and accelerate drug candidate identification</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                In Development
                             </a>
                         </div>
                     </div>
